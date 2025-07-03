@@ -1,0 +1,45 @@
+body {
+  font-family: Arial;
+  background: #f0f0f0;
+  padding: 20px;
+}
+header h1 {
+  text-align: center;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+.tab-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tab-btn.active {
+  background: #3b82f6;
+  color: white;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.card {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.video-player {
+  margin-top: 20px;
+  display: none;
+}

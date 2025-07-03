@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BPSC 70th Study Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>BPSC 70th Portal</h1>
+    <input type="text" id="searchInput" placeholder="Search...">
+  </header>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="videos">Videos</button>
+    <button class="tab-btn" data-tab="pdfs">PDFs</button>
+  </div>
+
+  <div class="tab-content active" id="videos">
+    <div class="card" onclick="playVideo('https://example.com/video1.mp4')">
+      <i class="fas fa-play-circle"></i> Polity Lecture 1 – Constitution
+    </div>
+  </div>
+
+  <div class="tab-content" id="pdfs">
+    <a class="card" href="assets/pdfs/BPSC_Syllabus.pdf" target="_blank">
+      <i class="fas fa-file-pdf"></i> BPSC Syllabus PDF
+    </a>
+  </div>
+
+  <div class="video-player" id="playerWrapper">
+    <video id="videoPlayer" controls></video>
+  </div>
+</body>
+</html>
