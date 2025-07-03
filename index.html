@@ -1,37 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <title>BPSC 70th Study Portal</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BPSC 70th - 2024 Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>BPSC 70th Portal</h1>
-    <input type="text" id="searchInput" placeholder="Search...">
-  </header>
 
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="videos">Videos</button>
-    <button class="tab-btn" data-tab="pdfs">PDFs</button>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <i class="fas fa-sun"></i>
+    <i class="fas fa-moon" style="display:none;"></i>
   </div>
 
-  <div class="tab-content active" id="videos">
-    <div class="card" onclick="playVideo('https://example.com/video1.mp4')">
-      <i class="fas fa-play-circle"></i> Polity Lecture 1 – Constitution
+  <!-- Title Section -->
+  <div class="container-fluid py-5 text-center">
+    <h1 class="brand-title">
+      <a href="https://t.me/AnandxExtractor" class="text-decoration-none text-reset">
+        <i class="fas fa-bolt"></i> ANAND x PRO <i class="fas fa-bolt"></i>
+      </a>
+    </h1>
+    <h2 class="header-title">BPSC 70th - 2024 on-line (P.T + Mains + Essay)</h2>
+    <p class="lead">
+      <a href="https://t.me/AnandxExtractor" class="badge bg-primary me-2"><i class="fas fa-robot"></i> JOIN @AnandxExtractor</a>
+      <a href="http://t.me/itzAnandXD" class="badge bg-warning"><i class="fas fa-bolt"></i> ANAND</a>
+    </p>
+  </div>
+
+  <!-- Video Player -->
+  <div class="container mb-5">
+    <div class="glass-card">
+      <div class="video-container">
+        <video id="player" playsinline controls></video>
+      </div>
+      <div class="url-input-wrapper">
+        <input type="text" class="custom-url-input" id="customUrl" placeholder="Enter video URL to play..." />
+        <button class="custom-url-btn" onclick="playCustomUrl()">
+          <i class="fas fa-play"></i> Play Video
+        </button>
+      </div>
     </div>
   </div>
 
-  <div class="tab-content" id="pdfs">
-    <a class="card" href="assets/pdfs/BPSC_Syllabus.pdf" target="_blank">
-      <i class="fas fa-file-pdf"></i> BPSC Syllabus PDF
-    </a>
+  <!-- Tabs and Content -->
+  <div class="container mb-4">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#videos">Videos</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#pdfs">PDFs</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#others">Others</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="videos" class="tab-pane fade show active p-3">
+        <div class="list-group">
+          <div class="list-group-item" onclick="playVideo('https://www.example.com/video1.mp4')">
+            <i class="fas fa-play-circle me-2"></i>Lecture 1: भारतीय संविधान
+          </div>
+          <div class="list-group-item" onclick="playVideo('https://www.example.com/video2.mp4')">
+            <i class="fas fa-play-circle me-2"></i>Lecture 2: प्रस्तावना
+          </div>
+        </div>
+      </div>
+      <div id="pdfs" class="tab-pane fade p-3">
+        <ul class="link-list">
+          <li class="link-item"><a href="#">Download Polity Notes PDF</a></li>
+        </ul>
+      </div>
+      <div id="others" class="tab-pane fade p-3">
+        <ul class="link-list">
+          <li class="link-item"><a href="#">Important Website Link</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <div class="video-player" id="playerWrapper">
-    <video id="videoPlayer" controls></video>
-  </div>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
